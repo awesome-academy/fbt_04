@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username:
+  password:
+
+development:
+  <<: *default
+  database: bookingtour
+
+test:
+  <<: *default
+  database: bookingtour_dev
+
+production:
+  <<: *default
+  database: bookingtour
