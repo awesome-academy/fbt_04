@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row">
+    <div class="[ col-xs-12 col-sm-offset-1 col-sm-8 ]">
+      <%= render partial: "reviews/review", collection: @reviews %>
+      <%= will_paginate @reviews %>
+    </div>
+  </div>
+</div>

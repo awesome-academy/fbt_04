@@ -2,9 +2,10 @@ class ReviewsController < ApplicationController
   layout "layouts/reviews"
 
   before_action :load_tour, only: [:create, :new]
+  before_action :load_review, only: [:destroy, :show]
+  before_action :correct_user_for_review, only: :destroy
 
   def show
-    @review = Review.find_by id: params[:id]
     return if @review
     flash[:danger] = t "controllers.reviews.show.danger"
     redirect_to root_path
@@ -26,6 +27,11 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def index
+    @reviews = Review.includes_user_and_tour.sort_by_created_at.paginate page: params[:page],
+      per_page: Settings.tour.length
+  end
+
   private
 
   def review_params
@@ -37,5 +43,19 @@ class ReviewsController < ApplicationController
     return if @tour
     flash[:danger] = t "controllers.reviews.load_tour.danger"
     redirect_to root_path
+  end
+
+  def load_review
+    @review = Review.find_by id: params[:id]
+    return if @review
+    flash[:danger] = t "controllers.reviews.notfound"
+    redirect_to root_path
+  end
+
+  def correct_user_for_review
+    @user = @review.user
+    return if current_user? @user
+    flash[:danger] = t "controllers.reviews.notfound"
+    redirect_to request.referrer || root_url
   end
 end

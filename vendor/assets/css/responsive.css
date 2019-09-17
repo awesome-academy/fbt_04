@@ -334,7 +334,6 @@ header nav .login_btn:hover{
   letter-spacing: 1px;
   line-height: 22px;
 }
-
 .search .advanced_search #check_in_date::-webkit-input-placeholder,
 .search .advanced_search #check_out_date::-webkit-input-placeholder,
 .search .advanced_search #min_price::-webkit-input-placeholder,

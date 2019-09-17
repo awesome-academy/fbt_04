@@ -1,25 +1,25 @@
 4.times do |n|
-  name  = Faker::Name.name
+  name  = "Category #{n}"
   Category.create!(name: name)
 end
 
 
-30.times do |n|
+10.times do |n|
   categorys = Category.all
-  name  = Faker::Name.name
-  category = categorys[1..3]
+  name  = "Tour #{n}"
+  category = categorys[0..3]
   category.each { |item|
   Tour.create!(
-    name: name,
+    name: "#{name} #{item.name}",
     price: n*10,
     category: item
   )
   }
 end
 
-30.times do |n|
+10.times do |n|
   name = Faker::Name.name
-  email = "tranngoc-#{n+1}@gmail.com"
+  email = "tranngoc-#{n}@gmail.com"
   password = "password"
   User.create!(
     fullname: name,
@@ -29,11 +29,11 @@ end
   )
 end
 
-30.times do |n|
+10.times do |n|
   users = User.all
   tours = Tour.all
   # name = Faker::Company.name
-  content = Faker::Pokemon.name
+  content = "Lan thu #{n} viet review ne"
   user = users[1..10]
   tour = tours[1..3]
   user.each do |user|
@@ -51,7 +51,7 @@ end
   users = User.all
   tours = Tour.all
   reviews = Review.all
-  content = Faker::Company.name
+  content = "Comment thu #{n}"
   user = users[0..3]
   tour = tours[0..3]
   review = reviews[0..3]
