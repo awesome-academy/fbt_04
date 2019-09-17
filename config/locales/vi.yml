@@ -1,0 +1,26 @@
+vi:
+  static_pages:
+    help:
+      title: "Trợ Giúp"
+      content: "Đây là trang trợ giúp của Booking Tour"
+    contact: 
+      title: "Liên Hệ"
+      content: "Đây là trang trợ giúp của Booking Tour"
+    about:
+      title: "Thông Tin"
+      content: "Đây là trang trợ giúp của Booking Tour"
+    home:
+      title: "Trang Chủ"
+      tourforcouple: "Tour cho Cặp Đôi"
+      tourcompany: "Tour Công Ty"
+      tourbeach: "Tour Biển"
+      price1: "$250"
+      time: "2 ngày, 1 đêm..."
+      time2: "3 ngày, 2 đêm cho Công Ty"
+      time3: "3 ngày, 2 đêm tại Vịnh Hạ Long"
+      price2: "$500"
+      view: "Xem thêm"
+  layouts:
+    application:
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"

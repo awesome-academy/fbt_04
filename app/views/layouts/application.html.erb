@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BookingTours</title>
+    <title><%= yield(:title) %> | BookingTours</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= link_to t(".english"), locale: "en" %>
+    <%= link_to t(".vietnamese"), locale: "vi" %>
+    <div class="site-wrap">
+      <%= yield %>
+    </div>
   </body>
 </html>
