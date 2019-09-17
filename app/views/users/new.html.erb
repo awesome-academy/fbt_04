@@ -1,0 +1,73 @@
+<body>
+  <div class="limiter">
+    <div class="container-login100">
+      <div class="login100-more"></div>
+
+      <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+        <%= form_for(@user, url: signup_path, class: "login100-form validate-form") do |f| %>
+          <%= render "shared/error_messages", object: f.object %>
+          <span class="login100-form-title p-b-59">
+            <%= t(".signup") %>
+          </span>
+
+          <div class="wrap-input100 validate-input"
+            data-validate = <%= t ".namerequire" %>>
+            <span class="label-input100"><%= f.label t ".fullname" %></span>
+            <%= f.text_field :fullname, class: "form-control, input100" %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input"
+            data-validate =<%= t ".emailrequire" %>>
+            <span class="label-input100"><%= f.label t ".email" %></span>
+            <%= f.email_field :email, class: "form-control, input100" %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input"
+            data-validate=<%= t ".phonerequire" %>>
+            <span class="label-input100"><%= f.label t ".phone" %></span>
+            <%= f.text_field :phone, class: "form-control input100" %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input"
+            data-validate = <%= t ".addressrequire" %>>
+            <span class="label-input100"><%= f.label t ".address" %></span>
+            <%= f.text_field :address, class: "form-control, input100" %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input"
+            data-validate = <%= t ".passwordrequire" %>>
+            <span class="label-input100"><%= f.label t ".password" %></span>
+            <%= f.password_field :password, class: "form-control, input100" %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input"
+            data-validate = <%= t ".passwordrequire" %>>
+            <span class="label-input100"><%= f.label t ".passwordcofir" %></span>
+            <%= f.password_field :password_confirmation, class: "form-control, input100" %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="flex-m w-full p-b-33">
+
+          </div>
+
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <button class="login100-form-btn">
+                <%= t(".signup") %>
+              </button>
+            </div>
+            <%= link_to t(".login"), root_path,
+              class: "dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>

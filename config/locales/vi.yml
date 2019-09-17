@@ -3,7 +3,7 @@ vi:
     help:
       title: "Trợ Giúp"
       content: "Đây là trang trợ giúp của Booking Tour"
-    contact: 
+    contact:
       title: "Liên Hệ"
       content: "Đây là trang trợ giúp của Booking Tour"
     about:
@@ -30,8 +30,46 @@ vi:
       title: "Phản hồi"
       h1: "Phản hồi cho Tour 1"
   helpers:
-    application: 
+    application:
       basetitle: "BookingTours"
   controllers:
-    reviews: 
-      danger: "Review not exit"
+    reviews:
+      danger: "Review not exist"
+    signup:
+      success: "Đăng ký thành công"
+      fail: "Đăng ký thất bại"
+  layouts:
+    header:
+      home: "Trang Chủ"
+      reviews: "Reviews"
+      bookingnow: "Đặt tour ngay"
+      about: "Thông tin"
+      contact: "Liên Hệ"
+      login: "Đăng Nhập"
+      caption: "A journey is best measured in friends, rather than miles."
+      properties: "North - Central - South"
+    footer:
+      about: "About"
+      support: "Support"
+      contact: "Contact"
+      caption: "Travel makes one modest. You see what a tiny place you occupy in the world."
+    signup:
+      bookingtours: "BookingTours"
+  shared:
+    error_messages:
+      youhave: "Bạn có %{error} lỗi"
+  users:
+    new:
+      signup: "Đăng ký"
+      login: "Đăng Nhập"
+      fullname: "Họ tên"
+      email: "Email"
+      phone: "Số điện thoại"
+      address: "Địa chỉ"
+      password: "Mật Khẩu"
+      passwordcofir: "Xác nhận mật khẩu"
+      namerequire: "Name is required"
+      emailrequire: "Valid email is required: ex@abc.xyz"
+      phonerequire: "Phone is required"
+      addressrequire: "Address is required"
+      passwordrequire: "Repeat Password is required"

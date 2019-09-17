@@ -5,20 +5,19 @@
       <a href="#" class="hamburger"></a>
       <nav>
         <ul>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Reviews", "#" %></li>
-          <li><%= link_to "Booking now", "#" %></li>
-          <li><%= link_to "About", "#" %></li>
-          <li><%= link_to "Contact", "#" %></li>
+          <li><%= link_to t(".home"), root_path %></li>
+          <li><%= link_to t(".reviews"), "#" %></li>
+          <li><%= link_to t(".bookingnow"), "#" %></li>
+          <li><%= link_to t(".about"), "#" %></li>
+          <li><%= link_to t(".contact"), "#" %></li>
         </ul>
-        <%= link_to "Login", "#", class: "login_btn" %>
+        <%= link_to t(".login"), signup_path, class: "login_btn" %>
       </nav>
     </div>
   </header><!--  end header section  -->
 
     <section class="caption">
-      <h2 class="caption">A journey is best measured in friends, rather than miles.</h2>
-      <h3 class="properties">North - Central - South</h3>
+      <h2 class="caption"><%= t ".caption" %></h2>
+      <h3 class="properties"><%= t ".properties" %></h3>
     </section>
 </section><!--  end hero section  -->
-

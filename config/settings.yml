@@ -1,2 +1,7 @@
 en: "en"
 vi: "vi"
+user:
+  length:
+    name: 50
+    email: 150
+    password: 6
