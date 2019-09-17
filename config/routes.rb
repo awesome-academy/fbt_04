@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :users, except: [:new, :create]
   resources :tours, only: [:index, :show] do
     resources :reviews, only: [:new, :show, :create]
+    resources :bookingtours, only: :create
   end
 end

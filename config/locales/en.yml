@@ -69,6 +69,12 @@ en:
       profiless: "Success Uploaded"
       profilef: "Fail to upload"
       notfound: "User not exist"
+    bookingtours:
+      create:
+        success: "Booking success"
+        danger: "Booking fail"
+      load_tour:
+        danger: "Tour not exist"
   sessions:
     new:
       rememberme: "Remember me?"
@@ -108,6 +114,8 @@ en:
   tours:
     tour:
       review: "Review"
+      booking: "Booking"
+      confirm: "You sure?"
   users:
     new:
       signup: "Sign Up"

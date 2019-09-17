@@ -50,6 +50,8 @@ vi:
   tours:
     tour:
       review: "Review"
+      booking: "Đặt"
+      confirm: "Bạn chắc chứ?"
   controllers:
     signup:
       success: "Đăng ký thành công"
@@ -69,6 +71,12 @@ vi:
       profiless: "Cập nhật thành công!"
       profilef: "Cập nhật thất bại"
       notfound: "Người dùng không tồn tại"
+    bookingtours:
+      create:
+        success: "Đặt tour thành công"
+        danger: "Đặt tour thất bại"
+      load_tour:
+        danger: "Tour không tồn tại"
   sessions:
     new:
       rememberme: "Nhớ tôi?"
