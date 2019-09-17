@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :activation_token, :remember_token
-  
+
   has_many :booking_tours
   has_many :rating_tours
   has_many :comments

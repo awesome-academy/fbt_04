@@ -55,6 +55,7 @@ en:
   layouts:
     header:
       home: "Home"
+      tours: "Tours"
       reviews: "Reviews"
       bookingnow: "Booking Now"
       about: "About"

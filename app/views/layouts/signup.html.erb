@@ -13,11 +13,11 @@
 
   <body>
     <div class="site-wrap">
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
-    <%= yield %>
-    <%= render "layouts/footer" %>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+      <%= render "layouts/footer" %>
     </div>
   </body>
 </html>

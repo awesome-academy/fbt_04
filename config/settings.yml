@@ -6,3 +6,5 @@ user:
     email: 150
     password: 6
 remember: "1"
+tour:
+  length: 9
