@@ -12,13 +12,9 @@
   <body>
     <%= link_to t(".english"), locale: Settings.en %>
     <%= link_to t(".vietnamese"), locale: Settings.vi %>
-      <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
-      <div class="site-wrap">
-        <%= render "layouts/header" %>
-          <%= yield %>
-        <%= render "layouts/footer" %>
-      </div>
+    <div class="site-wrap">
+    <%= render "layouts/header" %>
+      <%= yield %>
+    </div>
   </body>
 </html>

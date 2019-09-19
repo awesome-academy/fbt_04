@@ -20,10 +20,18 @@ vi:
       time3: "3 ngày, 2 đêm tại Vịnh Hạ Long"
       price2: "$500"
       view: "Xem thêm"
+      reviews: "Phản hồi"
   layouts:
     application:
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
+  reviews:
+    show:
+      title: "Phản hồi"
+      h1: "Phản hồi cho Tour 1"
   helpers:
     application: 
       basetitle: "BookingTours"
+  controllers:
+    reviews: 
+      danger: "Review not exit"
