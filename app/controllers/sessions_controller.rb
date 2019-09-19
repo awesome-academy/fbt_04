@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   layout "layouts/login"
-  
+
   def new
     @user = User.new
   end
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  private 
+  private
 
   def check_remember user
     return remember user if params[:session][:remember_me] == Settings.remember

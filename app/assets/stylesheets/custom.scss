@@ -7,6 +7,7 @@ $am10px: -10px;
 $d10px: 10px;
 $d20px: 20px;
 $light-gray: #777;
+$d30px: 30px;
 
 /* typography */
 h1, h2, h3, h4, h5, h6 {
@@ -88,4 +89,9 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+.glyphicon.glyphicon-edit {
+  margin-left: $d30px;
+  font-size: 1.5em;
 }

@@ -1,43 +1,9 @@
 <% provide(:title, t(".title")) %>
 <section class="listings">
   <div class="wrapper">
-    <ul class="properties_list">
-      <li>
-        <%= link_to image_tag("property_1.jpg") %>
-        <span class="price"><%= t(".price1") %></span>
-        <div class="property_details">
-          <h1>
-            <%= link_to(t(".tourforcouple")).html_safe %>
-          </h1>
-          <h2><%= t(".time") %> <span class="property_size"></span></h2>
-        </div>
-      </li>
-      <li>
-        <%= link_to image_tag("property_2.jpg") %>
-        <span class="price"><%= t(".price2") %></span>
-        <div class="property_details">
-          <h1>
-            <%= link_to(t(".tourcompany")).html_safe %>
-          </h1>
-          <h2><%= t(".time2") %> <span class="property_size"></span></h2>
-        </div>
-      </li>
-      <li>
-        <%= link_to image_tag("property_3.jpg") %>
-        <span class="price"><%= t(".price2") %></span>
-        <div class="property_details">
-          <h1>
-            <%= link_to(t(".tourbeach")).html_safe %>
-          </h1>
-          <h2><%= t(".time3") %><span class="property_size"></span></h2>
-        </div>
-      </li>
-    </ul>
+    <%= render "shared/item_tours" %>
     <div class="more_listing">
       <%= link_to t(".view"), root_path, class: "more_listing_btn" %>
-    </div>
-    <div class="more_listing">
-      <%= link_to t(".reviews"), "#", class: "more_listing_btn" %>
     </div>
   </div>
 </section>

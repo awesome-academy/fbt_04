@@ -21,6 +21,8 @@ en:
       price2: "$500"
       view: "View More Listings"
       reviews: "Review"
+    item_tours: 
+      review: "Review"
   layouts:
     application:
       english: "English"
@@ -32,15 +34,28 @@ en:
     show:
       title: "Reviews"
       h1: "Review for Tour 1"
+    new:
+      title: "Review"
+      content: "Content"
+      post: "Post"
   helpers:
     application:
       basetitle: "BookingTours"
+  shared: 
+    item_tours: 
+      review: "Review"
   controllers:
-    reviews:
-      danger: "Review not exist"
     signup:
       success: "Signup is success"
       fail: "Fail to signup"
+    reviews: 
+      show:
+        danger: "Review not exit"
+      create:
+        success: "Create review success"
+        fail: "Create review fail"
+      load_tour:
+        danger: "Tour not exits"
     sessions:
       danger: "Invalid email/password combination"
   sessions:
@@ -73,6 +88,11 @@ en:
   shared:
     error_messages:
       youhave: "You have %{error} error"
+    item_tours:
+      review: "Review"
+  tours: 
+    tour:
+      review: "Review"
   users:
     new:
       signup: "Sign Up"

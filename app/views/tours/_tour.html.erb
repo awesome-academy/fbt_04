@@ -1,0 +1,16 @@
+<li>
+  <%= link_to image_tag("property_1.jpg", class: "property_img"), root_path %>
+  <span class="price"><%= number_to_currency(tour.price) %></span>
+  <div class="property_details">
+    <h1>
+      <p><%= link_to tour.name, tour %></p>
+      <p><%= link_to "-(#{tour.category.name})", tour %></p>
+    </h1>
+    <h2><%= "#{tour.place}, #{tour.food}, #{tour.new}" %>
+      <span class="property_size"></span>
+    </h2>
+    <% if logged_in? %>
+      <%= link_to t(".review"), new_tour_review_url(tour), class: "glyphicon glyphicon-edit" %>
+    <% end %>
+  </div>
+</li>

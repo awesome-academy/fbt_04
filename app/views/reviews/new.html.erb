@@ -1,0 +1,14 @@
+<% provide(:title, t(".title")) %>
+<h1><%= t ".title" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:review, url: tour_reviews_path) do |f| %>
+
+      <%= f.label t(".content") %>
+      <%= f.text_area :content,cols: Settings.cols,
+        rows: Settings.rows, class: "form-control" %>
+
+      <%= f.submit t(".post"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
