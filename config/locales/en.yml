@@ -20,10 +20,18 @@ en:
       time3: "3 day, 2 night in Ha Long Bay"
       price2: "$500"
       view: "View More Listings"
+      reviews: "Review"
   layouts:
     application:
       english: "English"
       vietnamese: "Vietnamese"
+  reviews:
+    show:
+      title: "Reviews"
+      h1: "Review for Tour 1"
   helpers:
     application: 
       basetitle: "BookingTours"
+  controllers:
+    reviews: 
+      danger: "Review not exit"
