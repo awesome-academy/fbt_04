@@ -3,7 +3,7 @@ en:
     help:
       title: "Help"
       content: "This is the help page for Booking Tours"
-    contact: 
+    contact:
       title: "Contact"
       content: "This is the contact page for Booking Tours"
     about:
@@ -30,8 +30,46 @@ en:
       title: "Reviews"
       h1: "Review for Tour 1"
   helpers:
-    application: 
+    application:
       basetitle: "BookingTours"
   controllers:
-    reviews: 
-      danger: "Review not exit"
+    reviews:
+      danger: "Review not exist"
+    signup:
+      success: "Signup is success"
+      fail: "Fail to signup"
+  layouts:
+    header:
+      home: "Home"
+      reviews: "Reviews"
+      bookingnow: "Booking Now"
+      about: "About"
+      contact: "Contact"
+      login: "Login"
+      caption: "A journey is best measured in friends, rather than miles."
+      properties: "North - Central - South"
+    footer:
+      about: "About"
+      support: "Support"
+      contact: "Contact"
+      caption: "Travel makes one modest. You see what a tiny place you occupy in the world."
+    signup:
+      bookingtours: "BookingTours"
+  shared:
+    error_messages:
+      youhave: "You have %{error} error"
+  users:
+    new:
+      signup: "Sign Up"
+      login: "Log in"
+      fullname: "Full Your Name"
+      email: "Email"
+      phone: "Your Phone Number"
+      address: "Address"
+      password: "Password"
+      passwordcofir: "Password Confirmation"
+      namerequire: "Name is required"
+      emailrequire: "Valid email is required: ex@abc.xyz"
+      phonerequire: "Phone is required"
+      addressrequire: "Address is required"
+      passwordrequire: "Repeat Password is required"

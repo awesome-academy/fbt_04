@@ -13,17 +13,15 @@
 ActiveRecord::Schema.define(version: 2019_09_18_062052) do
 
   create_table "booking_tours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "tour_id"
-    t.integer "status", default: 1
+    t.integer "user_id"
+    t.integer "tour_id"
+    t.integer "status"
     t.integer "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
     t.integer "phone"
     t.string "address"
-    t.index ["tour_id"], name: "index_booking_tours_on_tour_id"
-    t.index ["user_id"], name: "index_booking_tours_on_user_id"
   end
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -36,13 +34,12 @@ ActiveRecord::Schema.define(version: 2019_09_18_062052) do
     t.string "content"
     t.integer "commentable_id"
     t.string "commentable_type"
-    t.bigint "user_id"
+    t.integer "user_id"
     t.integer "parent_comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["commentable_id"], name: "index_comments_on_commentable_id"
     t.index ["commentable_type"], name: "index_comments_on_commentable_type"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "rating_tours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -96,7 +93,4 @@ ActiveRecord::Schema.define(version: 2019_09_18_062052) do
     t.integer "role", default: 0
   end
 
-  add_foreign_key "booking_tours", "tours"
-  add_foreign_key "booking_tours", "users"
-  add_foreign_key "comments", "users"
 end
