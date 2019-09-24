@@ -25,6 +25,9 @@ en:
     application:
       english: "English"
       vietnamese: "Vietnamese"
+    header:
+      login: "Login"
+      logout: "Logout"
   reviews:
     show:
       title: "Reviews"
@@ -38,6 +41,17 @@ en:
     signup:
       success: "Signup is success"
       fail: "Fail to signup"
+    sessions:
+      danger: "Invalid email/password combination"
+  sessions:
+    new: 
+      rememberme: "Remember me?"
+      login: "Log in"
+      newuser: "New user?"
+      signupnow: "Sign up now!"
+      title: "Log in"
+      email: "Email"
+      password: "Password"
   layouts:
     header:
       home: "Home"

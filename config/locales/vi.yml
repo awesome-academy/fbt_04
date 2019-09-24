@@ -20,11 +20,7 @@ vi:
       time3: "3 ngày, 2 đêm tại Vịnh Hạ Long"
       price2: "$500"
       view: "Xem thêm"
-      reviews: "Phản hồi"
-  layouts:
-    application:
-      english: "Tiếng Anh"
-      vietnamese: "Tiếng Việt"
+      reviews: "Phản hồi"      
   reviews:
     show:
       title: "Phản hồi"
@@ -38,7 +34,21 @@ vi:
     signup:
       success: "Đăng ký thành công"
       fail: "Đăng ký thất bại"
+    sessions: 
+      danger: "Email/Password không đúng!"
+  sessions:
+    new:
+      rememberme: "Nhớ tôi?"
+      login: "Đăng Nhập"
+      newuser: "Người dùng mới?"
+      signupnow: "Đăng kí ngay!"
+      title: "Đăng Nhập"
+      email: "Email"
+      password: "Mật Khẩu"
   layouts:
+    application:
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
     header:
       home: "Trang Chủ"
       reviews: "Reviews"
@@ -48,6 +58,8 @@ vi:
       login: "Đăng Nhập"
       caption: "A journey is best measured in friends, rather than miles."
       properties: "North - Central - South"
+      login: "Đăng Nhập"
+      logout: "Đăng Xuất"
     footer:
       about: "About"
       support: "Support"

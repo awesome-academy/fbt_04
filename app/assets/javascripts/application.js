@@ -15,4 +15,3 @@
 //= require turbolinks
 //= require jquery.js
 //= require main.js
-//= require_tree .

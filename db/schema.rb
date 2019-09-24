@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_18_062052) do
+ActiveRecord::Schema.define(version: 2019_09_20_065020) do
 
   create_table "booking_tours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 2019_09_18_062052) do
     t.integer "phone"
     t.string "address"
     t.integer "role", default: 0
+    t.string "remember_digest"
   end
 
 end

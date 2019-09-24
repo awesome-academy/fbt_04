@@ -5,3 +5,4 @@ user:
     name: 50
     email: 150
     password: 6
+remember: "1"
