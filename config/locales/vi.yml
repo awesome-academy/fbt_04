@@ -20,20 +20,45 @@ vi:
       time3: "3 ngày, 2 đêm tại Vịnh Hạ Long"
       price2: "$500"
       view: "Xem thêm"
-      reviews: "Phản hồi"      
+      reviews: "Phản hồi"
+    item_tours: 
+      review: "Review"
+  layouts:
+    application:
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+    header:
+      login: "Đăng Nhập"
+      logout: "Đăng Xuất"
   reviews:
     show:
       title: "Phản hồi"
       h1: "Phản hồi cho Tour 1"
+    new:
+      title: "Review"
+      content: "Nội Dung"
+      post: "Đăng"
   helpers:
     application:
       basetitle: "BookingTours"
+  shared: 
+    item_tours: 
+      review: "Review"
+  tours: 
+    tour:
+      review: "Review"
   controllers:
-    reviews:
-      danger: "Review not exist"
     signup:
       success: "Đăng ký thành công"
       fail: "Đăng ký thất bại"
+    reviews: 
+      show: 
+        danger: "Review không tồn tại"
+      create:
+        success: "Tạo review thành công"
+        fail: "Tạo review thất bại"
+      load_tour:
+        danger: "Tour không tồn tại"
     sessions: 
       danger: "Email/Password không đúng!"
   sessions:
@@ -71,6 +96,8 @@ vi:
   shared:
     error_messages:
       youhave: "Bạn có %{error} lỗi"
+    item_tours:
+      review: "Review"
   users:
     new:
       signup: "Đăng ký"

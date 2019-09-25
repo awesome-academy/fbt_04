@@ -8,3 +8,6 @@ user:
 remember: "1"
 tour:
   length: 9
+perpage: 3
+cols: 30
+rows: 10
