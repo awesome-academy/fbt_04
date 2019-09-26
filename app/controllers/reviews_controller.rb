@@ -16,15 +16,18 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = current_user.reviews.create(content: params[:review][:content],
+    @review = current_user.reviews.build(content: params[:review][:content],
       tour: @tour)
-    if @review.save
+    @files = params[:review][:image]
+    ActiveRecord::Base.transaction do
+      @review.save
+      save_picture
       flash[:success] = t "controllers.reviews.create.success"
-      redirect_to root_path
-    else
+      redirect_to current_user
+    end
+    rescue StandardError
       flash[:danger] = t "controllers.reviews.create.fail"
       render :new
-    end
   end
 
   def index
@@ -34,6 +37,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     if @review.destroy
+      flash[:success] = t "controllers.reviews.create.success"
       redirect_to request.referrer
     else
       flash[:danger] = t "controllers.reviews.danger"
@@ -66,5 +70,11 @@ class ReviewsController < ApplicationController
     return if current_user? @user
     flash[:danger] = t "controllers.reviews.notfound"
     redirect_to request.referrer || root_url
+  end
+
+  def save_picture
+    @files.map do |file|
+      @review.imagerelations.create(user: current_user, picture: file)
+    end
   end
 end

@@ -12,3 +12,7 @@ tour:
 perpage: 3
 cols: 30
 rows: 10
+accept_image: "image/jpeg,image/gif,image/png"
+review:
+  length: 9999
+

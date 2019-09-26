@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :booking_tours
   has_many :rating_tours
   has_many :comments
+  has_many :imagerelations, as: :imagetable
   has_many :reactions
   has_many :reviews
   before_save :downcase_email
