@@ -8,8 +8,9 @@ class User < ApplicationRecord
   has_many :reviews
   before_save :downcase_email
   before_create :create_activation_digest
-  validates :fullname, presence: true, length:
-    {maximum: Settings.user.length.name}
+  validates :fullname, presence: true, length: {
+    maximum: Settings.user.length.name
+  }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, length: {maximum: Settings.user.length.email},
     presence: true, format: {with: VALID_EMAIL_REGEX},

@@ -21,7 +21,7 @@ vi:
       price2: "$500"
       view: "Xem thêm"
       reviews: "Phản hồi"
-    item_tours: 
+    item_tours:
       review: "Review"
   layouts:
     application:
@@ -38,29 +38,37 @@ vi:
       title: "Review"
       content: "Nội Dung"
       post: "Đăng"
+    review:
+      delete: "Xóa bài"
+      areyousure: "Chắc Chưa Đó Hả?"
   helpers:
     application:
       basetitle: "BookingTours"
-  shared: 
-    item_tours: 
+  shared:
+    item_tours:
       review: "Review"
-  tours: 
+  tours:
     tour:
       review: "Review"
   controllers:
     signup:
       success: "Đăng ký thành công"
       fail: "Đăng ký thất bại"
-    reviews: 
-      show: 
+    reviews:
+      show:
         danger: "Review không tồn tại"
       create:
         success: "Tạo review thành công"
         fail: "Tạo review thất bại"
       load_tour:
         danger: "Tour không tồn tại"
-    sessions: 
+    sessions:
       danger: "Email/Password không đúng!"
+    users:
+      danger: "Hãy Đăng Nhập Chính Xác Tài Khoản."
+      profiless: "Cập nhật thành công!"
+      profilef: "Cập nhật thất bại"
+      notfound: "Người dùng không tồn tại"
   sessions:
     new:
       rememberme: "Nhớ tôi?"
@@ -93,6 +101,10 @@ vi:
       caption: "Travel makes one modest. You see what a tiny place you occupy in the world."
     signup:
       bookingtours: "BookingTours"
+    header_user:
+      home: "Trang Chủ"
+      profile: "Trang cá nhân"
+      editpr: "Chỉnh sửa thông tin cá nhân"
   shared:
     error_messages:
       youhave: "Bạn có %{error} lỗi"
@@ -113,3 +125,11 @@ vi:
       phonerequire: "Phone is required"
       addressrequire: "Address is required"
       passwordrequire: "Repeat Password is required"
+    edit:
+      upload: "Cập Nhật"
+      fullname: "Họ tên"
+      email: "Email"
+      phone: "Số điện thoại"
+      address: "Địa chỉ"
+      password: "Mật Khẩu"
+      passwordcofir: "Xác nhận mật khẩu"

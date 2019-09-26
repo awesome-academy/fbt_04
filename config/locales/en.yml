@@ -21,7 +21,7 @@ en:
       price2: "$500"
       view: "View More Listings"
       reviews: "Review"
-    item_tours: 
+    item_tours:
       review: "Review"
   layouts:
     application:
@@ -38,17 +38,23 @@ en:
       title: "Review"
       content: "Content"
       post: "Post"
+    review:
+      delete: "Delete review"
+      areyousure: "Are Your Sure?"
   helpers:
     application:
       basetitle: "BookingTours"
-  shared: 
-    item_tours: 
+  shared:
+    item_tours:
       review: "Review"
   controllers:
+    reviews:
+      danger: "Review not exist"
+      notfound: "User not exist"
     signup:
       success: "Signup is success"
       fail: "Fail to signup"
-    reviews: 
+    reviews:
       show:
         danger: "Review not exit"
       create:
@@ -58,8 +64,13 @@ en:
         danger: "Tour not exits"
     sessions:
       danger: "Invalid email/password combination"
+    users:
+      danger: "Please log in."
+      profiless: "Success Uploaded"
+      profilef: "Fail to upload"
+      notfound: "User not exist"
   sessions:
-    new: 
+    new:
       rememberme: "Remember me?"
       login: "Log in"
       newuser: "New user?"
@@ -85,12 +96,16 @@ en:
       caption: "Travel makes one modest. You see what a tiny place you occupy in the world."
     signup:
       bookingtours: "BookingTours"
+    header_user:
+      home: "Home"
+      profile: "Profile"
+      editpr: "Edit Profile"
   shared:
     error_messages:
       youhave: "You have %{error} error"
     item_tours:
       review: "Review"
-  tours: 
+  tours:
     tour:
       review: "Review"
   users:
@@ -108,3 +123,11 @@ en:
       phonerequire: "Phone is required"
       addressrequire: "Address is required"
       passwordrequire: "Repeat Password is required"
+    edit:
+      upload: "upload"
+      fullname: "Full Your Name"
+      email: "Email"
+      phone: "Your Phone Number"
+      address: "Address"
+      password: "Password"
+      passwordcofir: "Password Confirmation"
