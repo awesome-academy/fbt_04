@@ -32,6 +32,15 @@ class ReviewsController < ApplicationController
       params[:page], per_page: Settings.tour.length
   end
 
+  def destroy
+    if @review.destroy
+      redirect_to request.referrer
+    else
+      flash[:danger] = t "controllers.reviews.danger"
+      redirect_to request.referrer || root_url
+    end
+  end
+
   private
 
   def review_params
