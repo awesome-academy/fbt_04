@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_26_062642) do
+ActiveRecord::Schema.define(version: 2019_09_30_035401) do
 
   create_table "booking_tours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_09_26_062642) do
     t.string "name"
     t.integer "phone"
     t.string "address"
+    t.integer "amountpeople"
     t.index ["tour_id"], name: "index_booking_tours_on_tour_id"
     t.index ["user_id"], name: "index_booking_tours_on_user_id"
   end
@@ -74,7 +75,7 @@ ActiveRecord::Schema.define(version: 2019_09_26_062642) do
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "tour_id"
     t.integer "user_id"
-    t.text "content"
+    t.string "content"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -90,6 +91,9 @@ ActiveRecord::Schema.define(version: 2019_09_26_062642) do
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "startdate"
+    t.datetime "finishdate"
+    t.integer "amountpeople"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

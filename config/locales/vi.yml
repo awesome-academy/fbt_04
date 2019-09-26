@@ -51,12 +51,23 @@ vi:
     tour:
       review: "Review"
       booking: "Đặt"
+  bookingtours:
+    new: 
       confirm: "Bạn chắc chứ?"
+      fullname: "Họ Tên"
+      phone: "Điện Thoại"
+      address: "Địa Chỉ"
+      tour: "Tour: "
+      price: "Giá: "
+      startdate: "Ngày bắt đầu: "
+      book: "Đặt"
+      amountpeople: "Số người: "
   controllers:
     signup:
       success: "Đăng ký thành công"
       fail: "Đăng ký thất bại"
     reviews:
+      notfound: "User không tồn tại"
       show:
         danger: "Review không tồn tại"
       create:
@@ -64,6 +75,8 @@ vi:
         fail: "Tạo review thất bại"
       load_tour:
         danger: "Tour không tồn tại"
+      destroy: 
+        success: "Xoá thành công"
     sessions:
       danger: "Email/Password không đúng!"
     users:
