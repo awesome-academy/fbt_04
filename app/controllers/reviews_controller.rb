@@ -25,9 +25,9 @@ class ReviewsController < ApplicationController
       flash[:success] = t "controllers.reviews.create.success"
       redirect_to current_user
     end
-    rescue StandardError
-      flash[:danger] = t "controllers.reviews.create.fail"
-      render :new
+  rescue StandardError
+    flash[:danger] = t "controllers.reviews.create.fail"
+    render :new
   end
 
   def index
