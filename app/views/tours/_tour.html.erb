@@ -10,7 +10,11 @@
       <span class="property_size"></span>
     </h2>
     <% if logged_in? %>
-      <%= link_to t(".review"), new_tour_review_url(tour), class: "glyphicon glyphicon-edit" %>
+      <%= link_to t(".review"), new_tour_review_url(tour),
+        class: "glyphicon glyphicon-edit" %>
+      <%= link_to t(".booking"), tour_bookingtours_url(tour),
+        method: :post, class: "glyphicon glyphicon-edit",
+        data: { confirm: t(".confirm") } %>
     <% end %>
   </div>
 </li>

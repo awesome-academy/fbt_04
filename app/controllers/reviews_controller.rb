@@ -28,8 +28,8 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.includes_user_and_tour.sort_by_created_at.paginate page: params[:page],
-      per_page: Settings.tour.length
+    @reviews = Review.includes_user_and_tour.sort_by_created_at.paginate page:
+      params[:page], per_page: Settings.tour.length
   end
 
   private
