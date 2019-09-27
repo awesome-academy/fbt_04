@@ -14,6 +14,7 @@
         </ul>
         <% if logged_in? %>
           <%= link_to t(".logout"), logout_path, class: "login_btn", method: :delete %>
+          <%= link_to t(".profile"), current_user, class: "login_btn" %>
         <% else %>
           <%= link_to t(".login"), login_path, class: "login_btn" %>
         <% end %>

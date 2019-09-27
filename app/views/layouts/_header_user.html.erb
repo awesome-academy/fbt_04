@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class = "container">
+      <div class="row">
+        <ul class="nav nav-tabs" role="tablist">
+          <li><%= link_to t(".home"), root_path %></li>
+          <li><%= link_to t(".profile"), current_user %></li>
+          <li><%= link_to t(".editpr"), edit_user_path %></li>
+        </ul>
+        <div class="card hovercard">
+          <div class="cardheader">
+          </div>
+          <div class="avatar">
+            <img alt="" src="http://lorempixel.com/100/100/people/9/">
+          </div>
+          <% if @user.present? %>
+          <div class="info">
+            <div class="title">
+              <a target="_blank" href="https://scripteden.com/"><%= @user.fullname %></a>
+            </div>
+            <div class="desc"><%= @user.email %></div>
+            <div class="desc"><%= @user.phone %></div>
+            <div class="desc"><%= @user.address %></div>
+          </div>
+          <% end %>
+          <div class="bottom">
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
