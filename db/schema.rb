@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_20_065020) do
+ActiveRecord::Schema.define(version: 2019_09_26_062642) do
 
   create_table "booking_tours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 2019_09_20_065020) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "imagerelations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "imagetable_type"
+    t.bigint "imagetable_id"
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_imagerelations_on_user_id"
+  end
+
   create_table "rating_tours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "tour_id"
@@ -64,7 +74,7 @@ ActiveRecord::Schema.define(version: 2019_09_20_065020) do
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "tour_id"
     t.integer "user_id"
-    t.string "content"
+    t.text "content"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -100,4 +110,5 @@ ActiveRecord::Schema.define(version: 2019_09_20_065020) do
   add_foreign_key "booking_tours", "tours"
   add_foreign_key "booking_tours", "users"
   add_foreign_key "comments", "users"
+  add_foreign_key "imagerelations", "users"
 end

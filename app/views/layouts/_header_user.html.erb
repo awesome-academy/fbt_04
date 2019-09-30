@@ -14,14 +14,14 @@
             <img alt="" src="http://lorempixel.com/100/100/people/9/">
           </div>
           <% if @user.present? %>
-          <div class="info">
-            <div class="title">
-              <a target="_blank" href="https://scripteden.com/"><%= @user.fullname %></a>
+            <div class="info">
+              <div class="title">
+                <a target="_blank" href="https://scripteden.com/"><%= @user.fullname %></a>
+              </div>
+              <div class="desc"><%= @user.email %></div>
+              <div class="desc"><%= @user.phone %></div>
+              <div class="desc"><%= @user.address %></div>
             </div>
-            <div class="desc"><%= @user.email %></div>
-            <div class="desc"><%= @user.phone %></div>
-            <div class="desc"><%= @user.address %></div>
-          </div>
           <% end %>
           <div class="bottom">
           </div>

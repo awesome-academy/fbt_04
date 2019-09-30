@@ -6,6 +6,9 @@
   </div>
   <div class="panel-body">
     <p><%= review.content %></p>
+      <% review.imagerelations.each do|item| %>
+        <p><img src=<%=item.picture %> alt="Mouse0270" /></p>
+      <% end %>
     <p></p>
   </div>
   <div class="panel-footer">
