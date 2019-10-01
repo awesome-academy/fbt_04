@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@bookingtour, url: tour_bookingtours_path) do |f| %>
+    <%= f.hidden_field :tour_id %>
+    <%= f.label t ".fullname" %>
+    <%= f.text_field :name, class: "form-control" %>
+
+    <%= f.label t ".phone" %>
+    <%= f.text_field :phone, class: "form-control" %>
+
+    <%= f.label t ".address" %>
+    <%= f.text_field :address, class: "form-control" %>
+
+    <p><%= t ".tour" %><%= @tour.name %></p>
+
+    <p><%= t ".price" %><%= number_to_currency(@tour.price) %></p>
+
+    <p><%= t ".startdate" %><%= @tour.startdate.strftime("%d-%m-%Y") %> </p>
+
+    <%= f.label t ".amountpeople" %>
+    <%= f.text_field :amountpeople, class: "form-control" %>
+
+    <%= f.submit t(".book"), class: "btn btn-primary", data: { confirm: t(".confirm") } %>
+      
+    <% end %>
+  </div>
+</div>

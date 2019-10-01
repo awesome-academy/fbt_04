@@ -37,7 +37,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     if @review.destroy
-      flash[:success] = t "controllers.reviews.create.success"
+      flash[:success] = t "controllers.reviews.destroy.success"
       redirect_to request.referrer
     else
       flash[:danger] = t "controllers.reviews.danger"

@@ -7,12 +7,18 @@ end
 10.times do |n|
   categorys = Category.all
   name  = "Tour #{n}"
+  startdate = Time.zone.now
+  finishdate = 30.days.from_now
+  amountpeople = 10
   category = categorys[0..3]
   category.each { |item|
   Tour.create!(
     name: "#{name} #{item.name}",
     price: n*10,
-    category: item
+    category: item,
+    startdate: startdate,
+    finishdate: finishdate,
+    amountpeople: amountpeople
   )
   }
 end

@@ -12,9 +12,8 @@
     <% if logged_in? %>
       <%= link_to t(".review"), new_tour_review_url(tour),
         class: "glyphicon glyphicon-edit" %>
-      <%= link_to t(".booking"), tour_bookingtours_url(tour),
-        method: :post, class: "glyphicon glyphicon-edit",
-        data: { confirm: t(".confirm") } %>
+      <%= link_to t(".booking"), new_tour_bookingtour_url(tour),
+        class: "glyphicon glyphicon-edit" %>
     <% end %>
   </div>
 </li>

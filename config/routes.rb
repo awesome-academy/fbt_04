@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   resources :reviews, only: [:show, :destroy]
   resources :tours, only: [:index, :show] do
     resources :reviews, only: [:new, :show, :create]
-    resources :bookingtours, only: :create
+    resources :bookingtours, only: [:create, :new]
   end
 end

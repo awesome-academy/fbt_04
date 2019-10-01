@@ -48,13 +48,11 @@ en:
     item_tours:
       review: "Review"
   controllers:
-    reviews:
-      danger: "Review not exist"
-      notfound: "User not exist"
     signup:
       success: "Signup is success"
       fail: "Fail to signup"
     reviews:
+      notfound: "User not exist"
       show:
         danger: "Review not exit"
       create:
@@ -62,6 +60,8 @@ en:
         fail: "Create review fail"
       load_tour:
         danger: "Tour not exits"
+      destroy: 
+        success: "Delete success"
     sessions:
       danger: "Invalid email/password combination"
     users:
@@ -115,7 +115,17 @@ en:
     tour:
       review: "Review"
       booking: "Booking"
+  bookingtours:
+    new: 
       confirm: "You sure?"
+      fullname: "FullName"
+      phone: "Phone"
+      address: "Address"
+      tour: "Tour: "
+      price: "Price: "
+      startdate: "Start date: "
+      book: "Book"
+      amountpeople: "Amount People: "
   users:
     new:
       signup: "Sign Up"
