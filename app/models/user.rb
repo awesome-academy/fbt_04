@@ -1,24 +1,25 @@
 class User < ApplicationRecord
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   attr_accessor :activation_token, :remember_token
-
-  has_many :booking_tours
-  has_many :rating_tours
-  has_many :comments
-  has_many :imagerelations, as: :imagetable
-  has_many :reactions
-  has_many :reviews
-  before_save :downcase_email
-  before_create :create_activation_digest
+  has_many :booking_tours, dependent: :destroy
+  has_many :rating_tours, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :imagerelations, as: :imagetable, dependent: :destroy
+  has_many :reactions, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   validates :fullname, presence: true, length: {
     maximum: Settings.user.length.name
   }
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, length: {maximum: Settings.user.length.email},
     presence: true, format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, length: {minimum: Settings.user.length.password},
     allow_nil: true
+  before_save :downcase_email
+  before_create :create_activation_digest
+  scope :by_name, ->(name){where("fullname like ?", "%#{name}%")}
+  scope :sort_newest, ->{order created_at: :desc}
 
   class << self
     def digest string

@@ -28,7 +28,8 @@ class BookingtoursController < ApplicationController
   end
 
   def bookingtour_params
-    params.require(:booking_tour).permit(:name, :phone, :address, :amountpeople, :tour_id)
+    params.require(:booking_tour).permit :name, :phone, :address,
+      :amountpeople, :tour_id
   end
 
   def subtraction_qty
