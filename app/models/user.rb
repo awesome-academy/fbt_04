@@ -11,11 +11,12 @@ class User < ApplicationRecord
     maximum: Settings.user.length.name
   }
   validates :email, length: {maximum: Settings.user.length.email},
-    presence: true, format: {with: VALID_EMAIL_REGEX},
-    uniqueness: {case_sensitive: false}
+            presence: true, format: {with: VALID_EMAIL_REGEX},
+            uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, length: {minimum: Settings.user.length.password},
     allow_nil: true
+  enum role: {user: 0, admin: 1}
   before_save :downcase_email
   before_create :create_activation_digest
   scope :by_name, ->(name){where("fullname like ?", "%#{name}%")}
