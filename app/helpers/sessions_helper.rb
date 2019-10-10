@@ -29,6 +29,13 @@ module SessionsHelper
     current_user.present?
   end
 
+  def logged_in_user
+    return if logged_in?
+    store_location
+    flash[:danger] = t "controllers.users.danger"
+    redirect_to login_url
+  end
+
   def forget user
     user.forget
     cookies.delete :user_id
@@ -48,5 +55,11 @@ module SessionsHelper
 
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
+  end
+
+  def is_admin?
+    return if current_user.admin?
+    flash[:danger] = t "controllers.users.danger"
+    redirect_to current_user
   end
 end

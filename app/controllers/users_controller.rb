@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  layout :resolve_layout
-
-  before_action :logged_in_user, except: [:new, :create, :show]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :load_user, except: [:new, :create]
   before_action :correct_user, only: [:edit, :update]
+
+  def index; end
 
   def new
     @user = User.new
@@ -15,14 +15,16 @@ class UsersController < ApplicationController
       flash[:success] = t "controllers.signup.success"
       redirect_to root_path
     else
-      flash[:fail] = t "controllers.signup.fail"
+      flash[:danger] = t "controllers.signup.fail"
       render :new
     end
   end
 
   def show
     @reviews = @user.reviews.paginate page: params[:page],
-      per_page: Settings.user.length.per_page
+                                      per_page: Settings.user.length.per_page
+    return if @reviews.any?
+    flash[:danger] = t "controllers.reviews.notfound"
   end
 
   def edit; end
@@ -32,7 +34,7 @@ class UsersController < ApplicationController
       flash[:success] = t "controllers.users.profiless"
       redirect_to @user
     else
-      flash[:fail] = t "controllers.users.profilefail"
+      flash[:danger] = t "controllers.users.profilefail"
       render :edit
     end
   end
@@ -48,29 +50,12 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
     flash[:danger] = t "controllers.users.danger"
-    redirect_to login_url
+    redirect_to current_user
   end
 
   def correct_user
     return if current_user? @user
-    store_location
     flash[:danger] = t "controllers.users.danger"
-    redirect_to login_url
-  end
-
-  def logged_in_user
-    return if logged_in?
-    store_location
-    flash[:danger] = t "controllers.users.danger"
-    redirect_to login_url
-  end
-
-  def resolve_layout
-    case action_name
-    when "new", "create"
-      "login"
-    else
-      "signup"
-    end
+    redirect_to current_user
   end
 end
