@@ -16,7 +16,7 @@ gem "jquery-ui-rails"
 gem "mini_magick", "4.7.0"
 gem "mysql2"
 gem "pickadate-rails"
-gem "puma", "~> 3.11"
+gem "puma", "~> 4.3"
 gem "rails", "~> 5.2.3"
 gem "rubocop", "~> 0.54.0", require: false
 gem "sass-rails", "~> 5.0"
